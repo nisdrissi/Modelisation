@@ -1,10 +1,6 @@
 ![image](Images/ensg.jpg)
 
-
-<span style="font-variant:small-caps;">Rapport de Projet</span><br/>
-
 ------------------------------------------------------------------------
-
 
 STRUCTURATION ET MODÉLISATION D’UN SYSTÈME D’INFORMATION : Le vignoble de Suresnes
 ==================================================================================
@@ -19,8 +15,6 @@ Clémentine <span style="font-variant:small-caps;">Chasles</span><br/>
 Nisrine <span style="font-variant:small-caps;">Drissi</span><br/>
 <br/>
 **Master 2 TSI 2015-2016**<br/>
-
-<span>0.4</span>
 
 *Responsable :* M. Emmanuel <span
 style="font-variant:small-caps;">Bardière</span><br/>
