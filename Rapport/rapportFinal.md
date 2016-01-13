@@ -1,44 +1,36 @@
----
-author:
-- 'Zakaria Ait-Omar, Clémentine Chasles, Nisrine Drissi'
-date: 14 janvier 2016
-title: |
-    STRUCTURATION ET MODÉLISATION D’UN SYSTÈME D’INFORMATION : Le vignoble
-    de Suresnes
-...
+Zakaria Ait-Omar<br/>
+Clémentine Chasles<br/>
+Nisrine Drissi<br/>
 
-![image](Images/ensg)
+![image](Images/ensg.jpg)
 
-1.5cm
 
-<span style="font-variant:small-caps;">Rapport de Projet</span>\
+<span style="font-variant:small-caps;">Rapport de Projet</span><br/>
 
 ------------------------------------------------------------------------
 
-0.4cm
 
-<span> **STRUCTURATION ET MODÉLISATION D’UN SYSTÈME D’INFORMATION :Le
-vignoble de Suresnes\
-**</span>
+STRUCTURATION ET MODÉLISATION D’UN SYSTÈME D’INFORMATION : Le vignoble de Suresnes
+==================================================================================
 
 ------------------------------------------------------------------------
 
-![image](Images/pagecouv.jpg)\
+![image](Images/pagecouv.jpg)<br/>
 
-<span>0.4</span>
 
-Zakaria <span style="font-variant:small-caps;">Ait-Omar</span>\
-Clémentine <span style="font-variant:small-caps;">Chasles</span>\
-Nisrine <span style="font-variant:small-caps;">Drissi</span>\
-\
-**Master 2 TSI 2015-2016**\
+Zakaria <span style="font-variant:small-caps;">Ait-Omar</span><br/>
+Clémentine <span style="font-variant:small-caps;">Chasles</span><br/>
+Nisrine <span style="font-variant:small-caps;">Drissi</span><br/>
+<br/>
+**Master 2 TSI 2015-2016**<br/>
 
 <span>0.4</span>
 
 *Responsable :* M. Emmanuel <span
-style="font-variant:small-caps;">Bardière</span>\
+style="font-variant:small-caps;">Bardière</span><br/>
 
 <span>14 janvier 2016</span>
+
 
 INTRODUCTION
 ============
@@ -64,6 +56,66 @@ nous détaillerons la solution proposée dans le cadre de ce projet en
 utilisant UML. Enfin, nous verrons quelles sont les limites recensées
 tout au long de notre travail, ainsi que les perspectives et
 améliorations possibles de notre applicatif.
+
+Tables des matières
+-------------------
+
+-   [INTRODUCTION](#introduction)
+-   [Analyse de l’existant](#analyse-de-lexistant)
+    -   [Présentation du vignoble](#présentation-du-vignoble)
+        -   [Histoire de la vigne de
+            Suresnes](#histoire-de-la-vigne-de-suresnes)
+        -   [Diagramme de cas d’utilisations de
+            l’existant](#diagramme-de-cas-dutilisations-de-lexistant)
+    -   [La vinification](#la-vinification)
+    -   [Le fonctionnement de l’équipe de
+        projet](#le-fonctionnement-de-léquipe-de-projet)
+        -   [La gestion de projet](#la-gestion-de-projet)
+        -   [La recherche documentaire](#la-recherche-documentaire)
+        -   [L’environnement de travail](#lenvironnement-de-travail)
+-   [Solution proposée](#solution-proposée)
+    -   [Conception de la solution](#conception-de-la-solution)
+        -   [Grands choix techniques](#grands-choix-techniques)
+        -   [Besoins fonctionnels](#besoins-fonctionnels)
+        -   [Besoins techniques](#besoins-techniques)
+        -   [Base de données](#base-de-données)
+        -   [Diagramme de classes](#diagramme-de-classes)
+    -   [Mieux connaître le vignoble](#mieux-connaître-le-vignoble)
+    -   [Un SI à destination des
+        internautes](#un-si-à-destination-des-internautes)
+        -   [Commander une bouteille de
+            vin](#commander-une-bouteille-de-vin)
+        -   [Manipuler la cartographie du
+            vignoble](#manipuler-la-cartographie-du-vignoble)
+    -   [Une meilleure gestion
+        administrative](#une-meilleure-gestion-administrative)
+        -   [La gestion du stock](#la-gestion-du-stock)
+        -   [Authentification et
+            inscription](#authentification-et-inscription)
+    -   [Architecture](#architecture)
+        -   [Navigation des acteurs sur l’application
+            web](#navigation-des-acteurs-sur-lapplication-web)
+        -   [Architecture de la solution](#architecture-de-la-solution)
+-   [Limites et perspectives](#limites-et-perspectives)
+    -   [Limites et contraintes
+        d’utilisation](#limites-et-contraintes-dutilisation)
+        -   [Le passage à l’informatique](#le-passage-à-linformatique)
+        -   [La multiplicité des rôles](#la-multiplicité-des-rôles)
+        -   [Limite d’un use-case : la gestion des
+            commandes](#limite-dun-use-case-la-gestion-des-commandes)
+    -   [Perspectives et améliorations du
+        SI](#perspectives-et-améliorations-du-si)
+        -   [Drones](#drones)
+        -   [Un support important de
+            communication](#un-support-important-de-communication)
+-   [CONCLUSION](#conclusion)
+-   [Annexes](#annexes)
+    -   [Compte-rendu : Rendez-vous avec Monsieur Jean-Louis Testud et
+        Catherine Magdelaine, à la Mairie de
+        Suresnes](#compte-rendu-rendez-vous-avec-monsieur-jean-louis-testud-et-catherine-magdelaine-à-la-mairie-de-suresnes)
+    -   [Compte-rendu : Visite de la vigne de Suresnes par Guillaume
+        Descroix](#compte-rendu-visite-de-la-vigne-de-suresnes-par-guillaume-descroix)
+
 
 Analyse de l’existant
 =====================
@@ -156,26 +208,26 @@ Pour réaliser notre projet en UML, nous nous sommes largement appuyés
 sur le cours de **Pierre Gérard, professeur à l’université de Paris 13 -
 Villetaneuse : *Introduction à UML2, Modélisation Orientée Objet et de
 Systèmes Logiciels*\
-([****](http://www-lipn.univ-paris13.fr/~gerard/docs/cours/uml-cours-slides.pdf))**.
+([http://www-lipn.univ-paris13.fr/~gerard/docs/cours/uml-cours-slides.pdf](http://www-lipn.univ-paris13.fr/~gerard/docs/cours/uml-cours-slides.pdf))**.
 De même, nous avons puisé sur l’internet bon nombre de ressources pour
 nous aider dans l’utilisation correcte des **standards d’UML2**. Voici
 une liste non exhaustive d’exemples de liens :
 
--   [****](http://www.uml.free.fr)
+-   [http://www.uml.free.fr](http://www.uml.free.fr)
 
--   les tutoriels recommandés sur le site [****](http://www.uml.org)
+-   les tutoriels recommandés sur le site [http://www.uml.org](http://www.uml.org)
 
 -   Puis, pour compléter la visite du vignoble de Suresnes et mieux
     comprendre le principe de vinification, le site très complet de
     l’Institut Français de la Vigne et du Vin
-    ([****](http://www.vignevin.com)) nous a aidés,
+    ([http://www.vignevin.com](http://www.vignevin.com)) nous a aidés,
 
 -   ainsi qu’évidemment le site de l’Office de Tourisme de Suresnes\
-    ([****](http://www.suresnes-tourisme.com/patrimoine-vitivinicole.html)).
+    ([http://www.suresnes-tourisme.com/patrimoine-vitivinicole.html](http://www.suresnes-tourisme.com/patrimoine-vitivinicole.html)).
 
 -   Nous avons aussi trouvé des exemples de logiciels viti-vinicole
     commercialisés pour voir ce qu’il se faisait déjà dans ce domaine :
-    il est à noter Lavilog ([****](http://www.lavilog.com)).
+    il est à noter Lavilog ([http://www.lavilog.com](http://www.lavilog.com)).
 
 ### L’environnement de travail
 
@@ -183,7 +235,7 @@ Notre équipe a réalisé les diagrammes avec les logiciels **ArgoUML** et
 **StarUML**. Nous avons créé un dépôt sur Github pour centraliser les
 données du projets et échanger.
 
-=&gt; [ **** ](https://github.com/nisdrissi/Modelisation)
+=&gt; [https://github.com/nisdrissi/Modelisation](https://github.com/nisdrissi/Modelisation)
 
 La gestion de projet a été faite sur un tableur LibreOffice. Le rapport
 a été rédigé en **markdown**, puis via **Pandoc**, a été convertit en
@@ -273,11 +325,9 @@ permettre de couvrir les volets suivant :
 Nous avons découpé ces volets en six use cases attribués chacun à
 l’acteur correspondant dans le diagramme ci-dessous :
 
-![Diagramme des cas d’utilisations de la
-solution](Images/UseCaseDiagramSolution.png)
+![Diagramme des cas d’utilisations de la solution](Images/UseCaseDiagramSolution.png)
 
-![Détail des cas d’utilisations de la
-solution](Images/UseCaseDiagramDetailSolution.png)
+![Détail des cas d’utilisations de la solution](Images/UseCaseDiagramDetailSolution.png)
 
 ### Besoins techniques
 
@@ -359,11 +409,9 @@ quelle est la représentation graphique la plus pertinente pour
 l’affichage des résultats. Le vigneron a ensuite une option d’export des
 résultats en fichier PDF.
 
-![Diagramme de séquence Gérer les données du
-vignoble](Images/SequenceDiagramGererDonneesVignoble)
+![Diagramme de séquence Gérer les données du vignoble](Images/SequenceDiagramGererDonneesVignoble)
 
-![Diagramme de séquence Analyser les données du
-vignoble](Images/SequenceDiagramAnalyserDonneesVignoble.jpg)
+![Diagramme de séquence Analyser les données du vignoble](Images/SequenceDiagramAnalyserDonneesVignoble.jpg)
 
 Un SI à destination des internautes
 -----------------------------------
@@ -376,15 +424,13 @@ faites. Il souhaite ensuite acheter du vin. Seul l’achat au vignoble est
 possible notre solution ne proposant pas la vente en ligne et la
 livraison.
 
-![Diagramme de séquence Commander une bouteille de
-vin](Images/SequenceDiagramCommanderBouteille.jpg)
+![Diagramme de séquence Commander une bouteille de vin](Images/SequenceDiagramCommanderBouteille.jpg)
 
 Pour finaliser son achat une fois la bouteille commandée via
 l’application, l’utilisateur vient retirer sa bouteille tel que décrit
 dans le diagramme de séquence ci-dessous :
 
-![Diagramme de séquence Retirer une bouteille de
-vin](Images/SequenceDiagramRetirerBouteille.jpg)
+![Diagramme de séquence Retirer une bouteille de vin](Images/SequenceDiagramRetirerBouteille.jpg)
 
 ### Manipuler la cartographie du vignoble
 
@@ -396,8 +442,7 @@ qu’il sélectionne un pied de vigne sur la carte, il se trouve confronté
 à l’impossibilité de consulter les informations du pied de vigne
 sélectionné. Le diagramme de séquence suivant détaille cette situation.
 
-![Diagramme de séquence Manipuler carte du
-vignoble](Images/SequenceDiagramManipulerCarte.jpg)
+![Diagramme de séquence Manipuler carte du vignoble](Images/SequenceDiagramManipulerCarte.jpg)
 
 Une meilleure gestion administrative
 ------------------------------------
@@ -415,8 +460,7 @@ années précédentes pour déterminer quel est le meilleur nombre de
 bouteilles de vin à dédier au site, comme le montre le diagramme de
 séquence suivant.
 
-![Diagramme de séquence Gérer le
-stock](Images/SequenceDiagramGererStock.jpg)
+![Diagramme de séquence Gérer le stock](Images/SequenceDiagramGererStock.jpg)
 
 L’administrateur peut ainsi consulter le stock actuel, l’analyser ou le
 modifier. Dans ce scénario, le vigneron décide d’analyser son stock,
@@ -437,8 +481,7 @@ s’inscrire sur le site pour avoir accès à certaines fonctionnalités,
 notamment la commande de bouteille(s) de vin et la manipulation de la
 cartographie des pieds de vigne.
 
-![Diagramme de séquence
-S’authentifier](Images/SequenceDiagramAuthentifier.jpg)
+![Diagramme de séquence S’authentifier](Images/SequenceDiagramAuthentifier.jpg)
 
 Une fois inscrit, l’administrateur doit valider la création du compte,
 en vérifiant que les champs saisis sont corrects, notamment le nom,
@@ -536,7 +579,7 @@ valeur).
 
 ![Diagramme de Déploiement](Images/Architecture.png)
 
-**** :
+**Définitions** :
 
 -   **Les servlets** : Une servlet est un programme java déployé sur un
     serveur web chargé automatiquement dans le serveur ou à la demande
@@ -677,10 +720,7 @@ Compte-rendu : Rendez-vous avec Monsieur Jean-Louis Testud et Catherine Magdelai
 
 **Jeudi 26 Novembre 2015**
 
-***Jeudi 26 Novembre 2015, nous avons rencontré Monsieur Jean-Louis
-Testud, Adjoint au Maire, Délégué à la Vigne et Grand Maître de la
-Confrérie du Vin de Suresnes. À ses côtés, Madame Catherine Magdelaine,
-Responsable de l’Association du Clos du Pas Saint-Maurice.***
+***Jeudi 26 Novembre 2015, nous avons rencontré Monsieur Jean-Louis Testud, Adjoint au Maire, Délégué à la Vigne et Grand Maître de la Confrérie du Vin de Suresnes. À ses côtés, Madame Catherine Magdelaine, Responsable de l’Association du Clos du Pas Saint-Maurice.***
 
 **Clémentine :** Nous sommes à l’école nationale des sciences
 géographiques, dans une filière informatique, à Champs-sur-Marne. Nous
@@ -1213,18 +1253,14 @@ la cartographie de la vigne, rang par rang.
 
 **Catherine Magdelaine :** Oui, le but c’est de faire simple.
 
-***Nous remercions Jean-Louis Testud et Catherine Magdelaine pour le
-temps qu’ils nous ont accordé et les précieuses informations partagées
-avec nous.***
+***Nous remercions Jean-Louis Testud et Catherine Magdelaine pour le temps qu’ils nous ont accordé et les précieuses informations partagées avec nous.***
 
 Compte-rendu : Visite de la vigne de Suresnes par Guillaume Descroix
 --------------------------------------------------------------------
 
 **Lundi 30 Décembre 2015**
 
-***Lundi 30 Novembre au matin, nous avons visité la vigne de Suresnes en
-compagnie de Guillaume Descroix, le vigneron de l’association Le Clos du
-Pas Saint-Maurice.***
+***Lundi 30 Novembre au matin, nous avons visité la vigne de Suresnes en compagnie de Guillaume Descroix, le vigneron de l’association Le Clos du Pas Saint-Maurice.***
 
 **Guillaume :** Nous utilisons un sécateur électrique.
 
@@ -1962,7 +1998,4 @@ Les gens se rapprochent aujourd’hui des produits locaux. Au-delà du
 attaché à l’empreinte écologique que je peux laisser, ou que je ne
 laisse pas.
 
-***Pour résumer, il ne faut pas oublier que les processus évoqués ne
-sont pas les mêmes selon les vins produits. Nous remercions Guillaume
-Descroix pour nous avoir consacré cette matinée à nous expliquer son
-travail et les différents processus de la production du vin.***
+***Pour résumer, il ne faut pas oublier que les processus évoqués ne sont pas les mêmes selon les vins produits. Nous remercions Guillaume Descroix pour nous avoir consacré cette matinée à nous expliquer son travail et les différents processus de la production du vin.***
