@@ -399,7 +399,7 @@ quelle est la représentation graphique la plus pertinente pour
 l’affichage des résultats. Le vigneron a ensuite une option d’export des
 résultats en fichier PDF.
 
-![Diagramme de séquence Gérer les données du vignoble](Images/SequenceDiagramGererDonneesVignoble)
+![Diagramme de séquence Gérer les données du vignoble](Images/SequenceDiagramGererDonneesVignoble.jpg)
 
 ![Diagramme de séquence Analyser les données du vignoble](Images/SequenceDiagramAnalyserDonneesVignoble.jpg)
 
