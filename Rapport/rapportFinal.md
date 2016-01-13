@@ -316,7 +316,7 @@ Nous avons découpé ces volets en six use cases attribués chacun à
 l’acteur correspondant dans le diagramme ci-dessous :
 
 ![Diagramme des cas d’utilisations de la solution](Images/UseCaseDiagramSolution.png)
-
+<br/>
 ![Détail des cas d’utilisations de la solution](Images/UseCaseDiagramDetailSolution.png)
 
 ### Besoins techniques
