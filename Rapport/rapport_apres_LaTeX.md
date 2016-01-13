@@ -603,6 +603,15 @@ pour la vigne de Suresnes.
 
 ### Drones
 
+L’une des perspectives d’amélioration de l’outil proposé consiste à
+utiliser des drones pour la prise d’images aériennes pouvant être
+interprétées.
+
+Elles pourront faire l’objet d’un traitement d’image pour calculer des
+indicateurs comme par exemple le NDVI (Indice de Végétation par
+Différence Normalisé). Cela constitue un ajout de métadonnées précises
+pour chacun des pieds de vigne.
+
 ### Un support important de communication
 
 La solution étant une application de type web, elle constitue un support
