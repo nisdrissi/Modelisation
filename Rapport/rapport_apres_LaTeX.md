@@ -60,7 +60,7 @@ améliorations possibles de notre applicatif.
 Analyse de l’existant
 =====================
 
-Présentation du vignoble {#presentation-du-vignoble}
+Présentation du vignoble
 ------------------------
 
 La vigne de Suresnes est le plus grand vignoble d’Île de France, où 4500
@@ -283,7 +283,7 @@ suivantes :
 
 Ainsi, une architecture n-tiers (architecture 4 tiers) a été adoptée.
 
-### Base de données {#base-de-donnes}
+### Base de données
 
 Dans cette partie sera établi le modèle statique du système en
 présentant des tables candidates avant de projeter la partie
@@ -329,7 +329,7 @@ différentes classes qui vont constituer notre système :
 
 ![Diagramme de classe général](Images/DiagrammeClasse.png)
 
-Mieux connaître le vignoble {#mieux-connaitre-le-vignoble}
+Mieux connaître le vignoble
 ---------------------------
 
 Le vigneron a la possibilité d’analyser son vignoble, d’avoir des
@@ -349,7 +349,7 @@ vignoble](Images/SequenceDiagramGererDonneesVignoble)
 ![Diagramme de séquence Analyser les données du
 vignoble](Images/SequenceDiagramAnalyserDonneesVignoble.jpg)
 
-Un SI à destination des internautes {#un-si-a-destination-des-internautes}
+Un SI à destination des internautes
 -----------------------------------
 
 ### Commander une bouteille de vin
@@ -436,7 +436,7 @@ Architecture
 
 ### Navigation des acteurs
 
-#### L’utilisateur {#utilisateur}
+#### L’utilisateur
 
 L’acteur Utilisateur dispose de plusieurs fonctionnalités portant
 notamment sur la consultation et le suivi des activités de
@@ -445,7 +445,7 @@ ces fonctionnalités, la figure ci-dessous a été réalisée :
 
 ![Diagramme de Navigation pour l’utilisateur](Images/ArboUser.png)
 
-#### L’administrateur {#administrateur}
+#### L’administrateur
 
 L’application offre à l’acteur Administrateur plusieurs fonctionnalités
 se rapportant à la gestion du stock et à la gestion des profils ainsi
@@ -456,7 +456,7 @@ suivante :
 
 ![Diagramme de Navigation pour l’administrateur](Images/ArboAdmin.png)
 
-#### Le vigneron {#vigneron}
+#### Le vigneron
 
 Afin d’éviter l’encombrement du diagramme de navigation de l’acteur
 Vigneron, et pour une meilleur lisibilité, un cadrant intitulé « Zoom »
@@ -550,7 +550,7 @@ auparavant. Néanmoins, il instaure également des limites, principalement
 dues à la presque non-utilisation de l’informatique par les acteurs de
 la vigne.
 
-### Le passage à l’informatique {#le-passage-a-linformatique}
+### Le passage à l’informatique
 
 Dans un premier temps, le passage à l’informatique risque d’être
 complexe. En effet, cela demande du temps pour la formation, pour la
@@ -563,7 +563,7 @@ chose. Ainsi, l’applicatif risque de demander des efforts importants
 dans la phase d’installation pour le vigneron et l’administrateur, et
 sera pleinement utilisé à moyen terme.
 
-### La multiplicité des rôles {#la-multiplicite-des-roles}
+### La multiplicité des rôles
 
 Également, comme le montre le diagramme des cas d’utilisation de
 l’existant (figure x) et de la solution (figure y), certains acteurs
@@ -594,7 +594,7 @@ vigneron étant seul et présent uniquement deux jours par semaine, la
 préparation des colis risque de lui prendre du temps et donc de réduire
 celui consacré au soin de la vigne et à la vinification.
 
-Perspectives et améliorations du SI {#perspectives-et-amuxe9liorations-du-si}
+Perspectives et améliorations du SI
 -----------------------------------
 
 Au-delà de ces limites, certaines perspectives sont envisageables à
