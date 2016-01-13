@@ -1,7 +1,4 @@
-\documentclass[a4paper, title]{report}
-\usepackage{geometry}
-	\geometry{hmargin=2.5cm,vmargin=1.5cm}
-	
+\documentclass[a4paper, titlepage]{report}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -30,7 +27,7 @@
 \hypersetup{unicode=true,
             pdfborder={0 0 0},
             breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+\urlstyle{same}  % don't use monospace font for \selectlanguage{french}urls
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -45,8 +42,8 @@
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
 
 % Redefines (sub)paragraphs to behave more like sections
 \ifx\subsubsection\undefined\else
@@ -59,26 +56,35 @@
 \fi
 
 
-\title{STRUCTURATION ET MODÉLISATION D'UN SYSTÈME D'INFORMATION : Le
-vignoble de Suresnes}      % renseigne le titre
-\author{Zakaria Ait-Omar, Clémentine Chasles, Nisrine Drissi} 
-\date{14 janvier 2016}     %   "   "   la future date de parution
+%pour redéfinir les marges du document
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
 
+%langues
+\usepackage[french, english]{babel}
+
+%pour retirer le mot "chapitre" des parties chapter
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{} 
-\titleformat{\part}[display]{\normalfont\huge\bfseries\centering}{\partname}
 
+
+\title{STRUCTURATION ET MODÉLISATION D'UN SYSTÈME D'INFORMATION : Le
+vignoble de Suresnes}
+\author{Zakaria Ait-Omar, Clémentine Chasles, Nisrine Drissi} 
+\date{14 janvier 2016}
+
+%page de couverture
 \begin{document}
-
+\selectlanguage{french}
 \begin{titlepage}
   \begin{sffamily}
   \begin{center}
 
     % Upper part of the page. The '~' is needed because \\
-    % only works if a paragraph has started.
+    % only works if a paragraph has started.[!h]
     \includegraphics[widht=4.13cm, height=4.38cm]{Images/ensg.jpg}~\\[1.5cm]
 
-    \textsc{\Large Rapport de Projet de structuration et modélisation d'un SI}\\[1.5cm]
+    \textsc{\Large Rapport de projet de structuration et modélisation d'un SI}\\[1.5cm]
 
     % Title
     \HRule \\[0.4cm]
@@ -112,19 +118,7 @@ vignoble de Suresnes}      % renseigne le titre
   \end{sffamily}
 \end{titlepage}
 
-%\part*{STRUCTURATION ET MODÉLISATION D'UN SYSTÈME D'INFORMATION : Le
-%vignoble de Suresnes}\label{structuration-et-modelisation-dun-systeme-%dinformation-le-vignoble-de-suresnes}
-
-%\begin{figure}
-%\includegraphics*[widht=4cm, height=3cm]{Images/ensg.jpg}
-%\end{figure}
-
-%\begin{figure}
-%\centering
-%\includegraphics*{Images/pagecouv.jpg}
-%\end{figure}
-\newpage
-
+%début du contenu
 \chapter{INTRODUCTION}\label{introduction}
 
 Pour le projet de «~Structuration et Modélisation d'un Système
@@ -149,24 +143,22 @@ utilisant UML. Enfin, nous verrons quelles sont les limites recensées
 tout au long de notre travail, ainsi que les perspectives et
 améliorations possibles de notre applicatif.
 
-\newpage
+\clearpage
 \tableofcontents
-\newpage
+\clearpage
 \listoffigures
-\newpage
+\clearpage
 
 \chapter{Analyse de l'existant}\label{analyse-de-lexistant}
 
-\section{Présentation du
-vignoble}\label{presentation-du-vignoble}
+\section{Présentation du vignoble}\label{presentation-du-vignoble}
 
 La vigne de Suresnes est le plus grand vignoble d'Île de France, où 4500
 pieds sont répartis sur 1 hectare. Il s'agit du seul vin ouvert à la
 vente, avec environ 5000 bouteilles produites par an. Pour en comprendre
 les caractéristiques, il est important d'en comprendre l'histoire.
 
-\subsection{Histoire de la vigne de
-Suresnes}\label{histoire-de-la-vigne-de-suresnes}
+\subsection{Histoire de la vigne de Suresnes}\label{histoire-de-la-vigne-de-suresnes}
 
 Dès le IXème siècle, la vigne est présente en Île-de-France sur les
 collines et les plateaux et notamment à Suresnes sur le Mont-Valérien.
@@ -198,14 +190,14 @@ administratrice est quant à elle chargée de la gestion des ressources,
 c'est-à-dire de l'association, de sa comptabilité et du stock de
 bouteilles. Chaque année, la récolte oscille entre 35 et 60 hectolitres.
 
-\subsection{Diagramme de cas d'utilisations de
-l'existant}\label{diagramme-de-cas-dutilisations-de-lexistant}
-
 Grâce à ces informations, nous avons réalisé un diagramme des cas
 d'utilisations. Il permet de mettre en évidence les différents acteurs
 et les principales actions réalisées au sein du vignoble.
 
-\begin{figure}
+\clearpage
+\subsection{Diagramme de cas d'utilisations de l'existant}\label{diagramme-de-cas-dutilisations-de-lexistant}
+
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/UseCaseDiagramExistant.jpg}
 \caption{Diagramme de cas d'utilisations de l'existant}
@@ -223,12 +215,14 @@ ci-dessous présente les grandes activités exercées dans le vignoble et
 qui sont effectuées par le vigneron et en incluant les différents
 tests~:
 
-\begin{figure}
+\clearpage
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/DiagrammeActivite.jpg}
 \caption{Diagramme d'activité}
 \end{figure}
 
+\clearpage
 \section{Le fonctionnement de l'équipe de
 projet}\label{le-fonctionnement-de-lequipe-de-projet}
 
@@ -245,10 +239,10 @@ s'étendant au départ sur 10 jours en salle projet, 3 sprints ont été
 définis pour que ce dernier soit achevé plus ou moins à la fin de ces 10
 jours. Voici le détail de la backlog de référence.
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/GestionProjet.jpg}
-\caption{Diagramme de cas d'utilisations de l'existant}
+\caption{Backlog de Référence}
 \end{figure}
 
 \subsection{La recherche documentaire}\label{la-recherche-documentaire}
@@ -365,6 +359,19 @@ notre système. Ces profils ainsi définis, représentent des profils types
 requis par chaque fonction dans l'association.
 \end{itemize}
 
+\begin{figure}[!h]
+\centering
+\includegraphics{Images/UseCaseDiagramSolution.png}
+\caption{Diagramme des cas d'utilisations de la solution}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics{Images/UseCaseDiagramDetailSolution.png}
+\caption{Détail des cas d'utilisations de la solution}
+\end{figure}
+
+\clearpage
 \subsection{Besoins techniques}\label{besoins-techniques}
 
 L'architecture en couches est la conséquence inévitable d'une approche
@@ -381,18 +388,6 @@ suivantes~:
 
 Ainsi, une architecture n-tiers (architecture 4 tiers) a été adoptée.
 
-\begin{figure}
-\centering
-\includegraphics{Images/UseCaseDiagramDetailSolution}
-\caption{Diagramme de séquence Gérer les données du vignoble}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{Images/SequenceDiagramGererDonneesVignoble}
-\caption{Diagramme de séquence Gérer les données du vignoble}
-\end{figure}
-
 \subsection{Base de données}\label{base-de-donnes}
 
 Dans cette partie sera établi le modèle statique du système en
@@ -403,36 +398,27 @@ applicative, la couche objets métier et la couche accès aux données.
 
 \begin{itemize}
 \tightlist
-\item
-  \textbf{Vignoble} : C'est la classe associative qui rassemble toutes les tables et qui référence notre vignoble à une année bien précise.
-\item
-  \textbf{Utilisateur}: Fait référence aux comptes de tous les profils qui vont
-  utiliser notre application.
-\item
-  \textbf{Bouteille} : C'est la table qui décrit notre produit essentiel. 
-\item  
-  \textbf{Stock} : Il s'agit du nombre de bouteilles qui existe dans notre vignoble.
-\item
-  \textbf{Commande} : C'est une table associative dans laquelle on précise qui a fait la commande de quoi et à quelle date.
-\item
-  \textbf{Cuve} : Il s'agit d'une table dont laquelle on stock tous les éléments nécessaires à chaque étape de la vinification.
-\item
-  \textbf{Parcelle de vigne} : Fait référence à toutes les parcelles qui
-  constituent le vignoble.
-\item
-  \textbf{Pied de vigne}: Désigne les caractéristiques de tous les pieds de
-  vigne du vignoble dès la mise en place de l'application.
+\item \textbf{Vignoble} : C'est la classe associative qui rassemble toutes les tables et qui référence notre vignoble à une année bien précise.
+\item \textbf{Utilisateur}: Fait référence aux comptes de tous les profils qui vont utiliser notre application.
+\item \textbf{Bouteille} : C'est la table qui décrit notre produit essentiel. 
+\item \textbf{Stock} : Il s'agit du nombre de bouteilles qui existe dans notre vignoble.
+\item \textbf{Commande} : C'est une table associative dans laquelle on précise qui a fait la commande de quoi et à quelle date.
+\item \textbf{Cuve} : Il s'agit d'une table dont laquelle on stock tous les éléments nécessaires à chaque étape de la vinification.
+\item \textbf{Parcelle de vigne} : Fait référence à toutes les parcelles qui constituent le vignoble.
+\item \textbf{Pied de vigne}: Désigne les caractéristiques de tous les pieds de vigne du vignoble dès la mise en place de l'application.
 \end{itemize}
 
 Le diagramme ci-après illustre les différentes tables en spécifiant les
 interactions entres ces tables~:
 
-\begin{figure}
+\clearpage
+\begin{figure}[!ht]
 \centering
 \includegraphics{Images/DiagrammeClasseBDD.jpg}
 \caption{Diagramme de classe de la Base de Données}
 \end{figure}
 
+\clearpage
 \subsection{Diagramme de classes}\label{diagramme-de-classes}
 
 Le diagramme des classes de l'application représente les différentes
@@ -440,9 +426,9 @@ relations et liaisons entre les classes candidates du système appelées
 aussi objets persistants. Le diagramme ci-dessous illustre les
 différentes classes qui vont constituer notre système~:
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
-\includegraphics{Images/DiagrammeClasse.jpg}
+\includegraphics{Images/DiagrammeClasse.png}
 \caption{Diagramme de classe général}
 \end{figure}
 
@@ -459,12 +445,20 @@ représentation graphique la plus pertinente pour l'affichage des
 résultats. Le vigneron a ensuite une option d'export des résultats en
 fichier PDF.
 
-\begin{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics{Images/SequenceDiagramGererDonneesVignoble}
+\caption{Diagramme de séquence Gérer les données du vignoble}
+\end{figure}
+
+\clearpage
+\begin{figure}[!ht]
 \centering
 \includegraphics{Images/SequenceDiagramAnalyserDonneesVignoble.jpg}
 \caption{Diagramme de séquence Analyser les données du vignoble}
 \end{figure}
 
+\clearpage
 \section{Un SI à destination des internautes}\label{un-si-a-destination-des-internautes}
 
 \subsection{Commander une bouteille de vin}\label{commander-une-bouteille-de-vin}
@@ -475,17 +469,18 @@ faites. Il souhaite ensuite acheter du vin. Seul l'achat au vignoble est
 possible notre solution de proposant pas la vente en ligne et la
 livraison.
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/SequenceDiagramCommanderBouteille.jpg}
 \caption{Diagramme de séquence Commander une bouteille de vin}
 \end{figure}
 
+\clearpage
 Pour finaliser son achat une fois la bouteille commandée via
 l'application, l'utilisateur vient retirer sa bouteille tel que décrit
 dans le diagramme de séquence ci-dessous :
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/SequenceDiagramRetirerBouteille.jpg}
 \caption{Diagramme de séquence Retirer une bouteille de vin}
@@ -501,7 +496,8 @@ qu'il sélectionne un pied de vigne sur la carte, il se trouve confronté
 à l'impossibilité de consulter les informations du pied de vigne
 sélectionné. Le diagramme de séquence suivant détaille cette situation.
 
-\begin{figure}
+\clearpage
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/SequenceDiagramManipulerCarte.jpg}
 \caption{Diagramme de séquence Manipuler carte du vignoble}
@@ -522,7 +518,8 @@ années précédentes pour déterminer quel est le meilleur nombre de
 bouteilles de vin à dédier au site, comme le montre le diagramme de
 séquence suivant.
 
-\begin{figure}
+\clearpage
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/SequenceDiagramGererStock.jpg}
 \caption{Diagramme de séquence Gérer le stock}
@@ -547,7 +544,7 @@ s'inscrire sur le site pour avoir accès à certaines fonctionnalités,
 notamment la commande de bouteille(s) de vin et la manipulation de la
 cartographie des pieds de vigne.
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/SequenceDiagramAuthentifier.jpg}
 \caption{Diagramme de séquence S'authentifier}
@@ -573,7 +570,8 @@ notamment sur la consultation et le suivi des activités de
 l'association. Afin d'avoir une vision concrète sur l'accès qu'il a vers
 ces fonctionnalités, la figure ci-dessous a été réalisée :
 
-\begin{figure}
+\clearpage
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/ArboUser.png}
 \caption{Diagramme de Navigation pour l’utilisateur}
@@ -588,7 +586,7 @@ l'association. L'enchaînement des pages offrant ces fonctionnalités est
 bien illustré par le diagramme de navigation présenté sur la figure
 suivante~:
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/ArboAdmin.png}
 \caption{Diagramme de Navigation pour l'administrateur}
@@ -602,7 +600,7 @@ n'a pas été détaillé sur ce même diagramme. La figure ci-après, fait un
 zoom sur cette partie du diagramme de navigation qui concerne la gestion
 du de vignoble~:
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics{Images/ArboVigneron.png}
 \caption{Diagramme de Navigation pour le vigneron}
@@ -640,11 +638,17 @@ présentation de se modifier.
 La couche objets métier est représentée par l'ensemble des entités
 persistantes de l'application. Ces entités représentent les Entity Bean
 pris en charge par EJB. Ils possèdent entre autre les propriétés
-suivantes~: - Ce sont des objets qui savent se mapper dans une base de
-données. - Ils utilisent un mécanisme de persistance. - Ils servent à
+suivantes~:
+\begin{itemize}
+\item Ce sont des objets qui savent se mapper dans une base de
+données.
+\item Ils utilisent un mécanisme de persistance.
+\item Ils servent à
 représenter sous forme d'objets des données situées dans une base de
-données. - Le plus souvent un objet = une ou plusieurs ligne(s) dans une
+données.
+\item Le plus souvent un objet = une ou plusieurs ligne(s) dans une
 ou plusieurs table(s).
+\end{itemize}
 
 \subsubsection{Couche accès aux données}\label{couche-acces-donnees}
 
@@ -653,25 +657,24 @@ l'application et garantit leur intégrité. Elle offre des méthodes pour
 mettre à jour ces données (insertion, suppression, changement de
 valeur).
 
-\begin{figure}
+\clearpage
+\begin{figure}[!hp]
 \centering
 \includegraphics{Images/Architecture.png}
 \caption{Diagramme de Déploiement}
 \end{figure}
 
-Définitions~: - Les servlets : Une servlet est un programme java déployé
+Définitions~: 
+\begin{itemize}
+\item \textbf{Les servlets} : Une servlet est un programme java déployé
 sur un serveur web chargé automatiquement dans le serveur ou à la
 demande d'un client. Une fois déployée, elle reste en attente des
 requêtes clients. Elle génère dynamiquement des données sous format de
-pages Web (format HTML ou XML) - Les JSPs : Ce sont des composants
-permettant de générer dynamiquement des pages web. Le modèle JSP est
-dérivé du modèle servlet. À l'appel d'un client, le serveur Web appelle
-le moteur JSP pour générer le code source, le compile pour générer
-l'exécutable de la servlet qui traite la requête. - EJB Reçoit
-l'information de l'application la traite et met à jour les données
-stockées dans le ``tier'' gestion des ressources ; il récupère
-l'information stockée, la traite et renvoie le résultat de ses
+pages Web (format HTML ou XML)
+\item \textbf{Les JSPs} : Ce sont des composants permettant de générer dynamiquement des pages web. Le modèle JSP est dérivé du modèle servlet. À l'appel d'un client, le serveur Web appelle le moteur JSP pour générer le code source, le compile pour générer l'exécutable de la servlet qui traite la requête.
+\item \textbf{EJB Reçoit}: l'information de l'application la traite et met à jour les données stockées dans le ``tier'' gestion des ressources ; il récupère l'information stockée, la traite et renvoie le résultat de ses
 traitements au client.
+\end{itemize}
 
 \chapter{Limites et perspectives}\label{limites-et-perspectives}
 
@@ -752,7 +755,7 @@ reconnaissance du vignoble comme étant un lieu vivant de la ville de
 Suresnes, représentant ainsi son dynamisme et son attachement au
 patrimoine.
 
-\newpage
+
 \chapter{CONCLUSION}\label{conclusion}
 
 En somme, le projet «~Structuration et Modélisation d'un Système
@@ -771,7 +774,8 @@ Enfin, cette solution est un outil de communication pour la Mairie de
 Suresnes et constitue une façade interactive et innovante pour le
 patrimoine viticole de la commune.
 
-\begin{figure}
+\clearpage
+\begin{figure}[!ht]
 \centering
 \includegraphics{Images/Maquette.png}
 \caption{Maquette : page d'accueil}
