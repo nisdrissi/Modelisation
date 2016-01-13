@@ -1,7 +1,3 @@
-Zakaria Ait-Omar<br/>
-Clémentine Chasles<br/>
-Nisrine Drissi<br/>
-
 ![image](Images/ensg.jpg)
 
 
