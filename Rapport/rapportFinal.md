@@ -1,25 +1,19 @@
-![image](Images/ensg.jpg)
-
-------------------------------------------------------------------------
 
 STRUCTURATION ET MODÉLISATION D’UN SYSTÈME D’INFORMATION : Le vignoble de Suresnes
 ==================================================================================
 
-------------------------------------------------------------------------
-
-![image](Images/pagecouv.jpg)<br/>
+![](Images/pagecouv.jpg)
 
 
-Zakaria <span style="font-variant:small-caps;">Ait-Omar</span><br/>
-Clémentine <span style="font-variant:small-caps;">Chasles</span><br/>
-Nisrine <span style="font-variant:small-caps;">Drissi</span><br/>
-<br/>
-**Master 2 TSI 2015-2016**<br/>
+**Zakaria Ait-Omar**
+**Clémentine Chasles**
+**Nisrine Drissi**
 
-*Responsable :* M. Emmanuel <span
-style="font-variant:small-caps;">Bardière</span><br/>
+**Master 2 TSI 2015-2016**
 
-<span>14 janvier 2016</span>
+*Responsable :* **M. Emmanuel Bardière**
+
+**14 janvier 2016**
 
 
 INTRODUCTION
@@ -316,7 +310,7 @@ Nous avons découpé ces volets en six use cases attribués chacun à
 l’acteur correspondant dans le diagramme ci-dessous :
 
 ![Diagramme des cas d’utilisations de la solution](Images/UseCaseDiagramSolution.png)
-<br/>
+
 ![Détail des cas d’utilisations de la solution](Images/UseCaseDiagramDetailSolution.png)
 
 ### Besoins techniques
@@ -1266,8 +1260,8 @@ Alors lors de la taille, je taille une première fois, puis j’enlève le
 bois présent sur les fils. Ce bois sera ensuite broyé et cela ira aux
 déchets.
 
-**Clémentine :** Vous faites cela <span>\[</span>la
-taille<span>\]</span> tout seul ?
+**Clémentine :** Vous faites cela (la
+taille) tout seul ?
 
 **Guillaume :** Oui, je fais ça tranquillement l’hiver et d’autres
 choses en parallèle. Cela se fait à partir de Décembre-Janvier. Il y a
@@ -1495,8 +1489,8 @@ aurait un risque de colmatage. Là, le mare s’écoule mieux.
 **Nisrine :** Ce que vous appelez mare est le liquide à l’intérieur du
 raisin ?
 
-**Guillaume :** Non, ça c’est le mou. Le marc <span>\[</span>de
-raisin<span>\]</span> correspond à tout ce qui reste dans le pressoir à
+**Guillaume :** Non, ça c’est le mou. Le marc (de
+raisin) correspond à tout ce qui reste dans le pressoir à
 la fin donc les pépins, la peau, les grappes, etc.
 
 **Zakaria :** La pression monte jusqu’à combien au maximum ?
